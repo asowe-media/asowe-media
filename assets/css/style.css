@@ -1,0 +1,1250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family: 'Montserrat';
+}
+
+li{
+    list-style: none;
+}
+p{
+    font-family: 'Montserrat';
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.actives{
+    border-bottom: 2px solid lightseagreen;
+}
+/* HEADER */
+header{
+    color: white;
+    padding: 2rem 2rem;
+    top: 1.5rem;
+    background-color: transparent;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.navbar .logo a{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Anton';
+}
+.navbar .logo span{
+    color: lightseagreen;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 4rem;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 2rem;
+    font-family: 'Montserrat';
+}
+
+.navbar .links li:hover{
+    border-bottom: 2px solid lightseagreen;
+}
+
+.navbar .toggle_btn{
+    color: lightseagreen;
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn{
+    color: white;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: normal;
+    cursor: pointer;
+    transition: 1s ease;
+    font-family: 'Montserrat';
+} 
+.action_btn:hover{
+    border-bottom: 2px solid lightseagreen;
+}
+
+.action_btn:active{
+    scale: 0.95;
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu{
+    position: absolute;
+    display: none;
+    right: 2rem;
+    top: 90px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat';
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px){
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+    
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+/* HERO SECTION 
+main{
+    position: relative;
+    top: -125px;
+    z-index: -1;
+}*/
+.hero{
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 100px;
+    padding-bottom: 150px;
+    color: white;
+    background-color: black;
+}
+.hero h3{
+    color: lightseagreen;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-family: 'Anton';
+}
+.hero h1{
+    font-size: 6rem;
+    font-family: 'Anton';
+}
+.hero a{
+    padding: 20px;
+    border-radius: 25px;
+    background-color: lightseagreen;
+    font-size: 15pt;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    transition: 1s ease;
+    color: black;
+}
+.hero a:hover{
+    background-color: white;
+    font-size: 15pt;
+}
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px){
+    .hero{
+        padding: 50px;
+    }
+    .hero h1{
+        font-size: 4rem;
+    }
+}
+
+@media(max-width: 576px){
+    .hero{
+        padding: 10px;
+        padding-bottom: 50px;
+    }
+    .hero h1{
+        font-size: 2rem;
+    }
+    .hero a{
+        padding: 15px;
+        border-radius: 25px;
+        background-color: lightseagreen;
+        font-size: 10pt;
+    }
+}
+
+
+
+/*brief about us begins*/
+.brief{
+    width: 100%;
+    float: left;
+    background-color: rgb(11, 13, 16);
+    color: white;
+    font-family: 'Montserrat';
+}
+.brief .brief2{
+    padding: 300px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    float: left;
+    width: 100%;
+    text-align: left;
+    justify-content: baseline;
+}
+.brief .brief2 h2{
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid white;
+    color: lightseagreen;
+    text-align: left;
+    float: left;
+    width: unset;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12pt;
+    border-radius: 10px;
+}
+.brief .brief2 h1{
+    float: left;
+    text-align: left;
+    font-size: 50pt;
+    font-family: 'Anton';
+    line-height: 1.25;
+}
+
+.brief .bottom{
+    width: 100%;
+    float: left;
+    padding: 100px;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+}
+.brief .bottom h4{
+    font-size: 15pt;
+}
+.brief .bottom span{
+    color: lightseagreen;
+    font-weight: 700;
+}
+
+
+.brief .bottom .left{
+    padding: 20px;
+}
+.brief .bottom .left .l1{
+    background: linear-gradient(rgba(11, 13, 16, .5), rgba(11, 13, 16, .5)), url('../images/backgrounds/cdb83bf1ec0e4ba64cc59e7dafbe1928.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    padding-top: 300px;
+    padding-bottom: 50px;
+    float: left;
+    width: 100%;
+    padding-right: 50px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+.brief .bottom .left .l1:hover{
+    background: linear-gradient(rgba(11, 13, 16, .9), rgba(11, 13, 16, .9)), url('../images/backgrounds/cdb83bf1ec0e4ba64cc59e7dafbe1928.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.brief .bottom .left .l2{
+    background: linear-gradient(rgba(11, 13, 16, .5), rgba(11, 13, 16, .5)), url('../images/backgrounds/Download\ Computer\ Monitor\ on\ Desk\ with\ Plain\ Background\ for\ Office\ Use\ for\ free.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    float: left;
+    width: 100%;
+    padding-right: 50px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+.brief .bottom .left .l2:hover{
+    background: linear-gradient(rgba(11, 13, 16, .9), rgba(11, 13, 16, .9)), url('../images/backgrounds/Download\ Computer\ Monitor\ on\ Desk\ with\ Plain\ Background\ for\ Office\ Use\ for\ free.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.brief .bottom .middle{
+    padding: 20px;
+}
+.brief .bottom .middle .m2{
+    background: linear-gradient(rgba(11, 13, 16, .5), rgba(11, 13, 16, .5)), url('../images/backgrounds/Hip-Hop\ Art.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    padding-top: 300px;
+    padding-bottom: 50px;
+    float: left;
+    width: 100%;
+    padding-right: 50px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+.brief .bottom .middle .m2:hover{
+    background: linear-gradient(rgba(11, 13, 16, .9), rgba(11, 13, 16, .9)), url('../images/backgrounds/Hip-Hop\ Art.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.brief .bottom .middle .m1{
+    background: linear-gradient(rgba(11, 13, 16, .5), rgba(11, 13, 16, .5)), url('../images/backgrounds/Premium\ Photo\ _\ Workspace\ laptop\,\ office\ accessories\ and\ copy\ space.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    float: left;
+    width: 100%;
+    padding-right: 50px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+.brief .bottom .middle .m1:hover{
+    background: linear-gradient(rgba(11, 13, 16, .9), rgba(11, 13, 16, .9)), url('../images/backgrounds/Premium\ Photo\ _\ Workspace\ laptop\,\ office\ accessories\ and\ copy\ space.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.brief .bottom .right{
+    padding: 20px;
+    text-align: justify;
+}
+.brief .bottom .right .r1 h4{
+    font-size: 24pt;
+}
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px){
+    .brief .brief2{
+        padding: 100px;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        float: left;
+        width: 100%;
+        text-align: center;
+        justify-content: baseline;
+    }
+    .brief .bottom{
+        width: 100%;
+        float: left;
+        padding: 10px;
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: repeat(2,2fr);
+    }
+    .brief .brief2 h1{
+        float: left;
+        text-align: left;
+        font-size: 30pt;
+    }
+    .brief .brief2 h2{
+        padding: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 0px solid lightseagreen;
+        text-align: center;
+        float: none;
+        width: unset;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 12pt;
+        border-radius: 10px;
+        color: lightseagreen;
+    }
+    .brief .brief2 h1{
+        float: none;
+        text-align: center;
+        font-size: 50pt;
+        font-family: 'Anton';
+        line-height: 1.25;
+    }
+}
+
+@media(max-width: 576px){
+    .brief .brief2{
+        padding: 10px;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        float: left;
+        width: 100%;
+        text-align: left;
+        justify-content: baseline;
+    }
+    .brief .bottom{
+        width: 100%;
+        float: left;
+        padding: 10px;
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: repeat(1,2fr);
+    }
+    .brief .brief2 h2{
+        padding: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 0px solid lightseagreen;
+        text-align: center;
+        float: none;
+        width: unset;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 12pt;
+        border-radius: 10px;
+        color: lightseagreen;
+    }
+    .brief .brief2 h1{
+        float: none;
+        text-align: center;
+        font-size: 50pt;
+        font-family: 'Anton';
+        line-height: 1.25;
+    }
+}
+
+/* Brief Services */
+.brief_services {
+    background-color: #14151b;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    padding: 100px;
+    width: 100%;
+    float: left;
+    font-family: 'Montserrat';
+}
+.brief_services h3{
+    color: lightseagreen;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: 'Anton';
+}
+.brief_services h2{
+    font-size: 50pt;
+    font-family: 'Anton';
+}
+
+.brief_services .bottom{
+    width: 100%;
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    padding: 10px;
+    justify-content: space-between;
+}
+.brief_services .bottom .down{
+    width: 90%;
+    float: left;
+    padding: 50px;
+    border: 1px solid white;
+    margin:20px;
+    border-radius: 10px;
+    background-color: rgba(11, 13, 16);
+}
+.brief_services .bottom .down:hover{
+    border: 1px solid lightseagreen;
+}
+.brief_services .bottom .active{
+    border: 1px solid lightseagreen;
+}
+
+.brief_services .bottom .down .fa-solid{
+   font-size:30pt;
+   color: lightseagreen;
+}
+.brief_services .bottom .down h5{
+   font-size: 17pt;
+}
+.brief_services .bottom .down a .fa-solid{
+    font-size:15pt;
+    color: white;
+ }
+.brief_services .bottom .down a:hover{
+    font-size:15pt;
+    color: lightseagreen;
+ }
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px){
+    .brief_services{
+        padding: 0px;
+        padding-top: 100px;
+    }
+    .brief_services .bottom{
+        width: 100%;
+        float: left;
+        padding: 10px;
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: repeat(2,2fr);
+    }
+}
+ @media(max-width: 576px){
+    .brief_services{
+        padding: 10px;
+        padding-top: 100px;
+    }
+    .brief_services .bottom{
+        width: 100%;
+        float: left;
+        padding: 10px;
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: repeat(1,2fr);
+    }
+    .brief_services h2{
+        font-size: 25pt;
+    }
+}
+
+/* Why us? */
+
+.why{
+    width: 100%;
+    float: left;
+    padding: 120px;
+    color: white;
+    background-color: rgba(11, 13, 16);
+    padding-bottom: 50px;
+    font-family: 'Montserrat';
+}
+.why h3{
+    color: lightseagreen;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-family: 'Anton';
+}
+.why h2{
+    font-size: 50pt;
+    font-weight: bolder;
+    font-family: 'Anton';
+    line-height: 1.25;
+}
+.why h2 span{
+    color: lightseagreen;
+}
+
+.why .bottom{
+    width: 100%;
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    font-family: sans-serif;
+}
+
+.why .bottom .right{
+    width: 100%;
+    float: left;
+    border-radius: 10px;
+    padding: 20px;
+}
+.why .bottom .right img{
+    width: 100%;
+    float: left;
+    border-radius: 10px;
+}
+
+.why .bottom .left{
+    width: 100%;
+    float: left;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 0;
+}
+.why .bottom .left h4{
+    font-size: 130pt;
+    color: black;
+    font-weight: 100;
+    opacity: 0.5;
+}
+.why .bottom .left p{
+    width: 100%;
+    float: left;
+    margin-top: -150px;
+    text-align: justify;
+}
+.why .bottom .left p span{
+    color: lightseagreen;
+    font-weight: 800;
+}
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px){
+    .why{
+        width: 100%;
+        float: left;
+        padding: 10px;
+        padding-top: 50px;
+        text-align: center;
+    }
+    .why h2{
+        font-size: 30pt;
+        font-weight: bolder;
+        font-family: 'Anton';
+    }
+}
+ @media(max-width: 576px){
+    .why .bottom{
+        width: 100%;
+        float: left;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .why h2{
+        font-size: 25pt;
+        font-weight: bolder;
+    }
+}
+
+/* project one */
+.projects_one{
+    width: 100%;
+    float: left;
+    padding: 120px;
+    padding-bottom: 50px;
+    color: white;
+    background-color: #14151b;
+}
+.projects_one h3{
+    font-family: 'Anton';
+    font-weight: 300;
+    color: lightseagreen;
+}
+.projects_one h2{
+    font-size: 50pt;
+    line-height: 1.25;
+    font-family: 'Anton';
+}
+
+.projects_one .bottom{
+    width: 100%;
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    font-family: 'Montserrat';
+}
+.projects_one .bottom .down{
+    width: 100%;
+    float: left;
+    padding: 15px;
+    font-family: 'Montserrat';
+}
+.projects_one .bottom .down img{
+    width: 100%;
+    float: left;
+    border-radius: 10px;
+}
+
+.projects_one .bottom .active{
+    padding-top: 50px;
+}
+.projects_one .bottom h3{
+    font-size: 24pt;
+}
+.projects_one .bottom p{
+    text-align: justify;
+}
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px){
+    .projects_one{
+        width: 100%;
+        float: left;
+        padding: 10px;
+        padding-top: 50px;
+        text-align: center;
+    }
+    .projects_one .bottom{
+        width: 100%;
+        float: left;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        font-family: 'Montserrat';
+    }
+    .projects_one h2{
+        font-size: 30pt;
+        line-height: 1.25;
+        font-family: 'Anton';
+    }
+}
+ @media(max-width: 576px){
+    .projects_one .bottom{
+        width: 100%;
+        float: left;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        font-family: 'Montserrat';
+    }
+    .projects_one h2{
+        font-size: 25pt;
+        line-height: 1.25;
+        font-family: 'Anton';
+    }
+}
+
+/* Our Team */
+
+.team{
+    background-color: #14151b;
+    color: white;
+    padding: 100px;
+    float: left;
+    width: 100%;
+}
+.team .words{
+    width: 40%;
+    float: left;
+    text-align: justify;
+}
+.team .words h3{
+    color: lightseagreen;
+    font-family: 'Anton';
+    text-transform: uppercase;
+}
+.team .words h2{
+    font-size: 50pt;
+    font-family: 'Anton';
+    text-transform: uppercase;
+    line-height: 1.25;
+}
+
+.team .pic{
+    width: 60%;
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-left: 20px;
+}
+.team .pic img{
+    width: 100%;
+    float: left;
+    padding: 10px;
+    border-radius: 20px;
+}
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px){
+    .team{
+        width: 100%;
+        float: left;
+        padding: 10px;
+        padding-top: 50px;
+        text-align: center;
+    }
+    .team .words{
+        width: 100%;
+        float: left;
+        text-align: center;
+    }
+    .team .pic{
+        width: 100%;
+        float: left;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding-left: 20px;
+    }
+    .team p{
+        text-align: justify;
+    }
+    .team .pic{
+        padding-left: 0;
+    }
+}
+ @media(max-width: 576px){
+    .team .pic{
+        width: 100%;
+        float: left;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        padding-left: 20px;
+    }
+    .team .pic .active{
+        margin-top: 0;
+    }
+    .team .pic{
+        padding-left: 0;
+    }
+}
+
+/**********Create**********/
+.create{
+    width: 100%;
+    float: left;
+    padding: 120px;
+    text-align: center;
+    background-color: rgba(11, 13, 16);
+    color: white;
+}
+.create .inside{
+    padding: 120px;
+    background-color: black;
+    border-radius: 30px;
+}
+.create .inside h2{
+    font-size: 60px;
+    font-family: 'Anton';
+}
+.create .inside a{
+    padding: 20px;
+    background-color: lightseagreen;
+    border-radius: 60px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: black;
+    transition: 1s ease;
+}
+.create .inside a:hover{
+    background-color: white;
+}
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px){
+    .create{
+        padding: 30px;
+    }
+    .create .inside{
+        padding: 50px;
+    }
+    .create .inside h2{
+        font-size: 40px;
+    }
+}
+ @media(max-width: 576px){
+    .create{
+        padding: 20px;
+    }
+}
+
+/********** Footer ********/
+footer{
+    width: 100%;
+    float: left;
+    color: white;
+    padding: 150px;
+    padding-bottom: 30px;
+    background-color: rgba(11, 13, 16);
+}
+footer img{
+    width: 50%;
+}
+footer p{
+    font-family: 'Montserrat';
+}
+
+footer .footer{
+    width: 100%;
+    float: left;
+    padding-bottom: 100px;
+}
+footer .footer li{
+    font-family: 'Montserrat';
+    text-transform: none;
+}
+footer .footer h3{
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+footer .footer .left{
+    width: 40%;
+    float: left;
+    padding-right: 20px;
+}
+footer .footer .left h1{
+    font-family: 'Anton';
+}
+footer .footer .left h1 span{
+    color: lightseagreen;
+}
+footer .footer .left p{
+    font-family: 'Montserrat';
+}
+
+footer .footer .other{
+    width: 60%;
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 4rem;
+}
+
+footer .down_left{
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+footer .down_right{
+    width: 50%;
+    float: left;
+    text-align: right;
+}
+
+footer .down_right .fa-brands{
+    padding-right: 10px;
+    font-size: 20pt;
+    transition: 1s ease;
+}
+footer .down_right .fa-brands:hover{
+    color: lightseagreen;
+}
+footer .other_two ul a li{
+    transition: 1.5s ease;
+    padding-bottom: 4px;
+}
+footer .other_two ul a li:hover{
+    border-bottom: 1px solid white;
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px){
+    footer{
+        width: 100%;
+        float: left;
+        padding: 10px;
+        padding-top: 50px;
+        text-align: center;
+    }
+    footer .footer .left{
+        width: 100%;
+        float: left;
+    }
+    footer .footer .other{
+        width: 100%;
+        float: left;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        text-align: center;
+    }
+    footer .footer .other .other_two{
+        padding: 30px;
+    }
+}
+ @media(max-width: 576px){
+    footer .footer .other{
+        width: 100%;
+        float: left;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        text-align: center;
+    }
+    footer .footer .other .other_two{
+        padding-bottom: 30px;
+    }
+    footer .footer .other .active{
+        padding-bottom: 0;
+    }
+
+    footer .down_left{
+        width: 100%;
+        float: left;
+        text-align: center;
+    }
+    footer .down_right{
+        width: 100%;
+        float: left;
+        text-align: center;
+        padding-top: 30px;
+    }
+}
+
+/****************************************************************************
+About.html begins here
+****************************************************************************/
+.two h1{
+    font-family: 'Montserrat';
+    font-size: 45pt;
+}
+
+
+
+
+.down i.fa-solid {
+    transition: opacity 0.3s ease;
+}
+
+.down a {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.down:hover i.fa-solid {
+    opacity: 0;
+}
+
+.down:hover a {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+.about{
+    width: 100%;
+    float: left;
+    padding: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgb(11, 13, 16);
+    font-family: 'Montserrat';
+}
+.about .sides{
+    width: 50%;
+    float: left;
+}
+.about .sides h4{
+    color: white;
+    font-size: 40pt;
+    line-height: 0.9;
+}
+.about .sides p{
+    color: #fff;
+    text-align: justify;
+    padding-right: 30px;
+}
+.about .sides p span{
+    color: #20b2aa;
+    border-bottom: 2px solid rgb(32, 178, 170);
+    font-weight: 700;
+}
+
+.about .sides img{
+    width: 100%;
+    float: left;
+    border-radius: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px){
+    .about{
+        padding: 20px;
+    }
+    .about .sides{
+        width: 100%;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+}
+ @media(max-width: 576px){
+    .about{
+        padding: 20px;
+        text-align: center;
+    }
+    .about .sides{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .about .sides p{
+        padding-right: 0;
+    }
+}
+
+
+.range{
+    color: white;
+    width: 100%;
+    float: left;
+    padding: 120px;
+    font-family: 'Montserrat';
+}
+.skill {
+    width: 50%;
+    float: left;
+}
+.skill h4{
+    font-size: 60px;
+    font-family: 'Anton';
+    line-height: 1;
+}
+.skill li{
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 15pt;
+    color: lightseagreen;
+}
+.skill li h5{
+    font-weight: 400;
+}
+
+
+/***** Company ******/
+.company{
+    width: 100%;
+    float: left;
+    padding: 120px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    text-align: center;
+}
+.company h6{
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: lightseagreen;
+    font-weight: 400;
+    font-size: 20pt;
+    border-radius: 10px;
+}
+.company h2{
+    font-size: 50pt;
+    font-family: 'Anton';
+    line-height: 1.25;
+}
+
+.company .people{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 3rem;
+    padding-top: 50px;
+}
+.company .people img{
+    width: 100%;
+    float: left;
+}
+
+/***** Contact Us Page ******/
+.contact-section{
+    width: 100%;
+    float: left;
+    padding: 120px;
+    background-color: rgba(11, 13, 16);
+    font-weight: 'Montserrat';
+}
+.contact-section h2{
+    text-align: center;
+    padding: 30px;
+    color: white;
+    font-size: 50px;
+}
+.contact-section form{
+    width: 100%;
+    float: left;
+}
+form #message{
+    width: 50%;
+    float: left;
+    margin-right: 10px;
+    padding: 20px;
+    border: 1px solid gray;
+    background-color: black;
+}
+form #name{
+    width: 48%;
+    float: left;
+    padding: 19px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    background-color: black;
+    color: white;
+}
+form #email{
+    width: 48%;
+    float: left;
+    padding: 20px;
+    margin-bottom: 19px;
+    border: 1px solid gray;
+    background-color: black;
+}
+form #subject{
+    width: 48%;
+    float: left;
+    padding: 19px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    background-color: black;
+}
+
+form .button{
+    background-color: lightseagreen;
+    color: black;
+    border: 0;
+    padding: 20px;
+    font-weight: 'Montserrat';
+    font-weight: 600;
+    font-size: 14pt;
+    transition: 1s ease;
+}
+form .button:hover{
+    background-color: white;
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px){
+    .contact-section{
+        padding: 20px;
+    }
+    form #message{
+        width: 100%;
+        float: left;
+        margin-bottom: 19px;
+    }
+    form #name{
+        width: 100%;
+    }
+    form #email{
+        width: 100%;
+    }
+    form #subject{
+        width: 100%;
+    }
+}
+ @media(max-width: 576px){
+    .contact-section{
+        padding: 20px;
+    }
+    form #message{
+        width: 100%;
+        float: left;
+        margin-bottom: 19px;
+    }
+    form #name{
+        width: 100%;
+    }
+    form #email{
+        width: 100%;
+    }
+    form #subject{
+        width: 100%;
+    }
+}
